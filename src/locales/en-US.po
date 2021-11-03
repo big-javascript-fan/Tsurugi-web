@@ -118,9 +118,9 @@ msgstr "<0>Unlock voting</0> to prepare for the next proposal."
 msgid "<0>🎉 </0>Welcome to team Unicorn :) <1>🎉</1>"
 msgstr "<0>🎉 </0>Welcome to team Unicorn :) <1>🎉</1>"
 
-#: src/pages/Vote/index.tsx
-msgid "A minimum threshold of 0.25% of the total UNI supply is required to submit proposals"
-msgstr "A minimum threshold of 0.25% of the total UNI supply is required to submit proposals"
+#: 
+#~ msgid "A minimum threshold of 0.25% of the total UNI supply is required to submit proposals"
+#~ msgstr "A minimum threshold of 0.25% of the total UNI supply is required to submit proposals"
 
 #: src/components/Menu/index.tsx
 msgid "About"
@@ -339,8 +339,12 @@ msgid "By adding this list you are implicitly trusting that the data is correct.
 msgstr "By adding this list you are implicitly trusting that the data is correct. Anyone can create a list, including creating fake versions of existing lists and lists that claim to represent projects that do not have one."
 
 #: src/components/WalletModal/index.tsx
-msgid "By connecting a wallet, you agree to Uniswap Labs’ <0>Terms of Service</0> and acknowledge that you have read and understand the <1>Uniswap protocol disclaimer</1>."
-msgstr "By connecting a wallet, you agree to Uniswap Labs’ <0>Terms of Service</0> and acknowledge that you have read and understand the <1>Uniswap protocol disclaimer</1>."
+msgid "By connecting a wallet, you agree to Tsurugi Labs’ <0>Terms of Service</0> and acknowledge that you have read and understand the <1>Tsurugi protocol disclaimer</1>."
+msgstr "By connecting a wallet, you agree to Tsurugi Labs’ <0>Terms of Service</0> and acknowledge that you have read and understand the <1>Tsurugi protocol disclaimer</1>."
+
+#: 
+#~ msgid "By connecting a wallet, you agree to Uniswap Labs’ <0>Terms of Service</0> and acknowledge that you have read and understand the <1>Uniswap protocol disclaimer</1>."
+#~ msgstr "By connecting a wallet, you agree to Uniswap Labs’ <0>Terms of Service</0> and acknowledge that you have read and understand the <1>Uniswap protocol disclaimer</1>."
 
 #: src/pages/Vote/styled.tsx
 msgid "Canceled"
@@ -350,9 +354,9 @@ msgstr "Canceled"
 msgid "Change"
 msgstr "Change"
 
-#: src/components/Header/index.tsx
-msgid "Charts"
-msgstr "Charts"
+#: 
+#~ msgid "Charts"
+#~ msgstr "Charts"
 
 #: src/components/Header/ChainConnectivityWarning.tsx
 msgid "Check network status"
@@ -374,6 +378,9 @@ msgstr "Claim <0/> for {0}"
 
 #: src/components/Header/index.tsx
 #: src/components/Menu/index.tsx
+msgid "Claim TRGX"
+msgstr "Claim TRGX"
+
 #: src/components/claim/AddressClaimModal.tsx
 #: src/components/claim/ClaimModal.tsx
 #: src/components/claim/ClaimModal.tsx
@@ -415,8 +422,12 @@ msgid "Claiming"
 msgstr "Claiming"
 
 #: src/components/Header/index.tsx
-msgid "Claiming UNI"
-msgstr "Claiming UNI"
+msgid "Claiming TRGX"
+msgstr "Claiming TRGX"
+
+#: 
+#~ msgid "Claiming UNI"
+#~ msgstr "Claiming UNI"
 
 #: src/components/earn/ClaimRewardModal.tsx
 #: src/components/earn/UnstakingModal.tsx
@@ -703,8 +714,12 @@ msgid "Don’t see one of your v2 positions? <0>Import it.</0>"
 msgstr "Don’t see one of your v2 positions? <0>Import it.</0>"
 
 #: src/components/vote/DelegateModal.tsx
-msgid "Earned UNI tokens represent voting shares in Uniswap governance."
-msgstr "Earned UNI tokens represent voting shares in Uniswap governance."
+msgid "Earned UNI tokens represent voting shares in Tsurugi governance."
+msgstr "Earned UNI tokens represent voting shares in Tsurugi governance."
+
+#: 
+#~ msgid "Earned UNI tokens represent voting shares in Uniswap governance."
+#~ msgstr "Earned UNI tokens represent voting shares in Uniswap governance."
 
 #: src/components/FeeSelector/index.tsx
 msgid "Edit"
@@ -1265,6 +1280,10 @@ msgstr "Pooled {0}:"
 msgid "Pools Overview"
 msgstr "Pools Overview"
 
+#: src/components/Header/index.tsx
+msgid "Presale"
+msgstr "Presale"
+
 #: src/pages/AddLiquidity/index.tsx
 msgid "Preview"
 msgstr "Preview"
@@ -1338,13 +1357,17 @@ msgstr "Queued"
 msgid "Rates"
 msgstr "Rates"
 
+#: src/pages/Vote/index.tsx
+msgid "Read more about Tsurugi governance"
+msgstr "Read more about Tsurugi governance"
+
 #: src/pages/Earn/index.tsx
 msgid "Read more about UNI"
 msgstr "Read more about UNI"
 
-#: src/pages/Vote/index.tsx
-msgid "Read more about Uniswap governance"
-msgstr "Read more about Uniswap governance"
+#: 
+#~ msgid "Read more about Uniswap governance"
+#~ msgstr "Read more about Uniswap governance"
 
 #: src/pages/Pool/v2.tsx
 msgid "Read more about providing liquidity"
@@ -1546,6 +1569,10 @@ msgstr "Swap exactly <0/> for <1/>"
 msgid "Swapping {0} {1} for {2} {3}"
 msgstr "Swapping {0} {1} for {2} {3}"
 
+#: src/pages/Vote/index.tsx
+msgid "TRGX tokens represent voting shares in Tsurugi governance. You can vote on each proposal yourself or delegate your votes to a third party."
+msgstr "TRGX tokens represent voting shares in Tsurugi governance. You can vote on each proposal yourself or delegate your votes to a third party."
+
 #: src/components/Popups/ClaimPopup.tsx
 msgid "Thanks for being part of the Uniswap community <0/>"
 msgstr "Thanks for being part of the Uniswap community <0/>"
@@ -1708,6 +1735,14 @@ msgstr "Transfer Token"
 msgid "Try Again"
 msgstr "Try Again"
 
+#: src/pages/Vote/index.tsx
+msgid "Tsurugi Governance"
+msgstr "Tsurugi Governance"
+
+#: src/components/vote/ProposalEmptyState.tsx
+msgid "Tsurugi governance is only available on Layer 1. Switch your network to Ethereum Mainnet to view Proposals and Vote."
+msgstr "Tsurugi governance is only available on Layer 1. Switch your network to Ethereum Mainnet to view Proposals and Vote."
+
 #: src/components/Settings/index.tsx
 msgid "Turn On Expert Mode"
 msgstr "Turn On Expert Mode"
@@ -1724,9 +1759,9 @@ msgstr "UNI in circulation:"
 msgid "UNI price:"
 msgstr "UNI price:"
 
-#: src/pages/Vote/index.tsx
-msgid "UNI tokens represent voting shares in Uniswap governance. You can vote on each proposal yourself or delegate your votes to a third party."
-msgstr "UNI tokens represent voting shares in Uniswap governance. You can vote on each proposal yourself or delegate your votes to a third party."
+#: 
+#~ msgid "UNI tokens represent voting shares in Uniswap governance. You can vote on each proposal yourself or delegate your votes to a third party."
+#~ msgstr "UNI tokens represent voting shares in Uniswap governance. You can vote on each proposal yourself or delegate your votes to a third party."
 
 #: src/pages/RemoveLiquidity/index.tsx
 msgid "UNI {0}/{1} Burned"
@@ -1757,17 +1792,17 @@ msgstr "Unclaimed:"
 msgid "Undetermined"
 msgstr "Undetermined"
 
-#: src/pages/Vote/index.tsx
-msgid "Uniswap Governance"
-msgstr "Uniswap Governance"
+#: 
+#~ msgid "Uniswap Governance"
+#~ msgstr "Uniswap Governance"
 
 #: src/components/SwitchLocaleLink/index.tsx
 msgid "Uniswap available in: <0>{0}</0>"
 msgstr "Uniswap available in: <0>{0}</0>"
 
-#: src/components/vote/ProposalEmptyState.tsx
-msgid "Uniswap governance is only available on Layer 1. Switch your network to Ethereum Mainnet to view Proposals and Vote."
-msgstr "Uniswap governance is only available on Layer 1. Switch your network to Ethereum Mainnet to view Proposals and Vote."
+#: 
+#~ msgid "Uniswap governance is only available on Layer 1. Switch your network to Ethereum Mainnet to view Proposals and Vote."
+#~ msgstr "Uniswap governance is only available on Layer 1. Switch your network to Ethereum Mainnet to view Proposals and Vote."
 
 #: src/pages/Earn/index.tsx
 msgid "Uniswap liquidity mining"
