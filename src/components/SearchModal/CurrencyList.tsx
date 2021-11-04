@@ -121,6 +121,7 @@ function CurrencyRow({
   const customAdded = useIsUserAddedToken(currency)
   const balance = useCurrencyBalance(account ?? undefined, currency)
 
+  // console.log('currency is ', currency)
   // only show add or remove buttons if not on selected list
   return (
     <MenuItem
@@ -213,7 +214,7 @@ export default function CurrencyList({
     }
     return currencies
   }, [currencies, otherListTokens])
-
+  // console.log(itemData)
   const Row = useCallback(
     function TokenRow({ data, index, style }) {
       const row: Currency | BreakLine = data[index]
@@ -221,9 +222,8 @@ export default function CurrencyList({
       if (isBreakLine(row)) {
         return <BreakLineComponent style={style} />
       }
-
       const currency = row
-
+      console.log('currency', currency)
       const isSelected = Boolean(currency && selectedCurrency && selectedCurrency.equals(currency))
       const otherSelected = Boolean(currency && otherCurrency && otherCurrency.equals(currency))
       const handleSelect = () => currency && onCurrencySelect(currency)

@@ -1,0 +1,23 @@
+{
+    "name": "Tsurugi Tokens",
+    "timestamp": "2021-01-21T23:57:10.982Z",
+    "version": {
+        "major": 2,
+        "minor": 0,
+        "patch": 0
+    },
+    "tags": {},
+    "logoURI": "http://localhost:3000/images/tsurugi-coin.svg",
+    "keywords": [
+        "uniswap",
+        "default"
+    ],
+    "tokens": [{
+        "chainId": 4,
+        "address": "0x5dFB58FdB2225C4D44851d2120162812A23949E6",
+        "name": "Tsurugi",
+        "symbol": "TRGX",
+        "decimals": 18,
+        "logoURI": "http://localhost:3000/images/tsurugi-coin.png"
+    }]
+}

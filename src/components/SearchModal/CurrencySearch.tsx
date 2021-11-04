@@ -10,6 +10,7 @@ import ReactGA from 'react-ga'
 import AutoSizer from 'react-virtualized-auto-sizer'
 import { FixedSizeList } from 'react-window'
 import { Text } from 'rebass'
+import { combineMaps, TSURUGI_TOKEN_WRAP } from 'state/lists/hooks'
 import styled from 'styled-components/macro'
 
 import { ExtendedEther } from '../../constants/tokens'
@@ -81,7 +82,8 @@ export function CurrencySearch({
   const [invertSearchOrder] = useState<boolean>(false)
 
   const allTokens = useAllTokens()
-
+  console.log('allTokens', allTokens)
+  // combineMaps(TSURUGI_TOKEN_WRAP, allTokens)
   // if they input an address, use it
   const isAddressSearch = isAddress(debouncedQuery)
 
@@ -110,7 +112,10 @@ export function CurrencySearch({
   }, [filteredTokens, tokenComparator])
 
   const filteredSortedTokens = useSortedTokensByQuery(sortedTokens, debouncedQuery)
-
+  console.log('filteredSortedTokens', filteredSortedTokens)
+  // useTokensFromMap(TSURUGI_TOKEN_WRAP)
+  console.log('TSURUGI_TOKEN_WRAP', TSURUGI_TOKEN_WRAP)
+  // filteredInactiveTokens.unshift(TSURUGI_TOKEN_WRAP)
   const ether = useMemo(() => chainId && ExtendedEther.onChain(chainId), [chainId])
 
   const filteredSortedTokensWithETH: Currency[] = useMemo(() => {

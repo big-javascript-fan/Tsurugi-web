@@ -13,7 +13,7 @@ interface TagInfo extends TagDetails {
 export class WrappedTokenInfo implements Token {
   public readonly isNative: false = false
   public readonly isToken: true = true
-  public readonly list: TokenList
+  public list: TokenList
 
   public readonly tokenInfo: TokenInfo
 

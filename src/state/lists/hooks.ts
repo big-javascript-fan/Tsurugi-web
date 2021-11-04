@@ -5,6 +5,7 @@ import { useAppSelector } from 'state/hooks'
 import sortByListPriority from 'utils/listSort'
 
 import BROKEN_LIST from '../../constants/tokenLists/broken.tokenlist.json'
+import TSURUGI_TOKEN_LIST from '../../constants/tokenLists/tsurugi.tokenlist.json'
 import UNSUPPORTED_TOKEN_LIST from '../../constants/tokenLists/unsupported.tokenlist.json'
 import { AppState } from '../index'
 import { UNSUPPORTED_LIST_URLS } from './../../constants/lists'
@@ -27,6 +28,8 @@ function listToTokenMap(list: TokenList): TokenAddressMap {
 
   const map = list.tokens.reduce<Mutable<TokenAddressMap>>((tokenMap, tokenInfo) => {
     const token = new WrappedTokenInfo(tokenInfo, list)
+    // console.log('token', token)
+    // console.log('tokenMap', tokenMap)
     if (tokenMap[token.chainId]?.[token.address] !== undefined) {
       console.error(`Duplicate token! ${token.address}`)
       return tokenMap
@@ -43,6 +46,9 @@ function listToTokenMap(list: TokenList): TokenAddressMap {
 }
 
 const TRANSFORMED_DEFAULT_TOKEN_LIST = listToTokenMap(DEFAULT_TOKEN_LIST)
+export const TSURUGI_TOKEN_WRAP = listToTokenMap(TSURUGI_TOKEN_LIST)
+
+console.log('TSURUGI_TOKEN_WRAP', TSURUGI_TOKEN_WRAP)
 
 export function useAllLists(): AppState['lists']['byUrl'] {
   return useAppSelector((state) => state.lists.byUrl)
@@ -112,6 +118,8 @@ export function useInactiveListUrls(): string[] {
 export function useCombinedActiveList(): TokenAddressMap {
   const activeListUrls = useActiveListUrls()
   const activeTokens = useCombinedTokenMapFromUrls(activeListUrls)
+  // console.log('TRANSFORMED_DEFAULT_TOKEN_LIST', TRANSFORMED_DEFAULT_TOKEN_LIST)
+  // console.log('DEFAULT_TOKEN_LIST', DEFAULT_TOKEN_LIST)
   return combineMaps(activeTokens, TRANSFORMED_DEFAULT_TOKEN_LIST)
 }
 

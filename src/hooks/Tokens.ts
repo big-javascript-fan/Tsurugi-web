@@ -6,7 +6,13 @@ import { useMemo } from 'react'
 
 import { createTokenFilterFunction } from '../components/SearchModal/filtering'
 import { ExtendedEther, WETH9_EXTENDED } from '../constants/tokens'
-import { useAllLists, useCombinedActiveList, useInactiveListUrls } from '../state/lists/hooks'
+import {
+  combineMaps,
+  TSURUGI_TOKEN_WRAP,
+  useAllLists,
+  useCombinedActiveList,
+  useInactiveListUrls,
+} from '../state/lists/hooks'
 import { WrappedTokenInfo } from '../state/lists/wrappedTokenInfo'
 import { NEVER_RELOAD, useSingleCallResult } from '../state/multicall/hooks'
 import { useUserAddedTokens } from '../state/user/hooks'
@@ -16,7 +22,7 @@ import { useBytes32TokenContract, useTokenContract } from './useContract'
 import { useActiveWeb3React } from './web3'
 
 // reduce token map into standard address <-> Token mapping, optionally include user added tokens
-function useTokensFromMap(tokenMap: TokenAddressMap, includeUserAdded: boolean): { [address: string]: Token } {
+export function useTokensFromMap(tokenMap: TokenAddressMap, includeUserAdded: boolean): { [address: string]: Token } {
   const { chainId } = useActiveWeb3React()
   const userAddedTokens = useUserAddedTokens()
 
@@ -54,7 +60,9 @@ function useTokensFromMap(tokenMap: TokenAddressMap, includeUserAdded: boolean):
 
 export function useAllTokens(): { [address: string]: Token } {
   const allTokens = useCombinedActiveList()
-  return useTokensFromMap(allTokens, true)
+  const newAllTokens = combineMaps(TSURUGI_TOKEN_WRAP, allTokens)
+  console.log('newAllTokens', newAllTokens)
+  return useTokensFromMap(newAllTokens, true)
 }
 
 export function useUnsupportedTokens(): { [address: string]: Token } {
